@@ -1,4 +1,4 @@
-# 🚀 AI-Powered Paraphrasing Tool
+# 🚀 Generative AI Text Paraphraser
 
 ### Transformer-Based NLP System for Text Paraphrasing, Grammar Correction, and Evaluation
 
