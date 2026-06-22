@@ -1,108 +1,161 @@
-# Generative-AI-Text-Paraphraser
+# 🚀 AI-Powered Paraphrasing Tool
+
+### Transformer-Based NLP System for Text Paraphrasing, Grammar Correction, and Evaluation
+
+---
 
 ## 📌 Overview
 
-The AI-Powered Paraphrasing Tool is a Transformer-based NLP system that rewrites input text while preserving its meaning. It also performs grammar correction and evaluates output quality using standard NLP metrics.
+The AI-Powered Paraphrasing Tool is a Python-based Natural Language Processing (NLP) application that rewrites text while preserving its original meaning. The tool leverages a Transformer-based T5 model to generate paraphrased content and uses grammar correction techniques to improve fluency and readability.
 
-Built using T5 Transformer models, this project demonstrates a complete NLP pipeline including generation, correction, and evaluation.
+Additionally, the system evaluates the generated output using standard NLP metrics such as BLEU, ROUGE, and Semantic Similarity.
+
+This project demonstrates the practical application of Generative AI and Transformer models for text generation tasks.
+
+---
 
 ## ✨ Features
 
-- 🔁 AI-based paraphrasing using T5 Transformer  
-- ✍️ Grammar correction using TextBlob  
-- 📊 Evaluation metrics:
-  - BLEU Score  
-  - ROUGE Score  
-  - Semantic Similarity  
-- 🧠 Sentence embedding comparison using SentenceTransformers  
-- ⚡ Lightweight pipeline (no Java required)  
-- 🧪 Supports multiple test cases  
+* 🔁 Text paraphrasing using the T5 Transformer model
+* ✍️ Grammar correction using TextBlob
+* 📊 BLEU score evaluation
+* 📈 ROUGE score evaluation
+* 🧠 Semantic similarity measurement using Sentence Transformers
+* 💻 Console-based input and output
+* ⚡ Fast and lightweight implementation in Python
 
-## 🛠️ Tech Stack
+---
 
-- Python 3  
-- Hugging Face Transformers  
-- PyTorch  
-- NLTK  
-- TextBlob  
-- ROUGE Score  
-- Sentence-Transformers  
+## 🛠️ Technologies Used
+
+* Python
+* PyTorch
+* Hugging Face Transformers
+* TextBlob
+* NLTK
+* ROUGE Score
+* Sentence Transformers
+
+---
 
 ## 📂 Project Structure
 
-AI-Paraphrasing-Tool/
-
-├── paraphrasing_tool.py   # Main pipeline code  
-├── requirements.txt       # Dependencies  
-└── README.md              # Project documentation  
-
-## ⚙️ Installation
-
-1. Clone the repository  
-```bash
-git clone https://github.com/your-username/AI-Paraphrasing-Tool.git
-cd AI-Paraphrasing-Tool
+```text
+AI-Powered-Paraphrasing-Tool
+│
+├── main.py
+├── requirements.txt
+├── README.md
+└── LICENSE
 ```
 
-2. Install dependencies  
+---
+
+## 📦 Installation
+
+Install the required libraries:
+
 ```bash
 pip install transformers sentencepiece torch
 pip install textblob nltk rouge-score sentence-transformers
 ```
 
-3. Download NLTK data  
-```python
-import nltk
-nltk.download('punkt')
+Or using requirements.txt:
+
+```bash
+pip install -r requirements.txt
 ```
 
-## 🚀 How It Works
+---
 
-- Input text is passed into a T5 Transformer model  
-- Model generates multiple paraphrased versions  
-- Each output is:
-  - Grammatically corrected (TextBlob)  
-  - Evaluated using:
-    - BLEU score  
-    - ROUGE score  
-    - Semantic similarity (Sentence-BERT)  
-- Final results are displayed with metrics  
+## ▶️ Running the Application
 
-## ▶️ Usage
+Execute the following command:
 
-```python
-from paraphrasing_tool import run_pipeline
-
-text = "Machine learning enables computers to learn from data."
-run_pipeline(text, n=2)
+```bash
+python main.py
 ```
 
-## 📊 Example Output
+The application will prompt:
 
-ORIGINAL TEXT:
-Machine learning enables computers to learn from data...
+```text
+Enter text to paraphrase:
+```
 
-PARAPHRASE:
-Machine learning allows systems to learn from data...
+Enter any sentence or paragraph and press Enter.
 
-METRICS:
-BLEU  : 0.42  
-ROUGE : 0.78  
-SIM   : 0.91  
+---
 
-## 🧠 Model Used
+## 🔍 Sample Input
 
-- T5 Paraphraser: ramsrigouthamg/t5_paraphraser  
-- Sentence Embedding Model: all-MiniLM-L6-v2  
+```text
+Artificial Intelligence is transforming the way people work and communicate.
+```
 
-## 📈 Future Improvements
+## 🔍 Sample Output
 
-- 🌐 Web UI using Streamlit or Flask  
-- 🔥 Better grammar correction using LanguageTool API  
-- 📊 Advanced evaluation dashboard  
-- 💾 Save paraphrased outputs as dataset  
-- ⚡ Faster inference optimization
-- 
+```text
+Original Text:
+Artificial Intelligence is transforming the way people work and communicate.
+
+Paraphrased Text:
+Artificial intelligence is changing how individuals communicate and perform their work.
+
+BLEU Score: 0.42
+ROUGE-1: 0.70
+ROUGE-2: 0.51
+ROUGE-L: 0.68
+Semantic Similarity: 0.93
+```
+
+---
+
+## 📊 Evaluation Metrics
+
+### BLEU Score
+
+Measures the similarity between the original text and the paraphrased output based on word overlap.
+
+### ROUGE Score
+
+Evaluates the quality of generated text by comparing overlapping words and sequences.
+
+### Semantic Similarity
+
+Measures how closely the meaning of the paraphrased text matches the original text using sentence embeddings.
+
+---
+
+## 🔄 Workflow
+
+1. User enters input text.
+2. T5 Transformer generates a paraphrased version.
+3. TextBlob performs grammar correction.
+4. BLEU score is calculated.
+5. ROUGE score is calculated.
+6. Semantic similarity score is computed.
+7. Results are displayed in the console.
+
+---
+
+## 🎯 Learning Outcomes
+
+* Understanding Transformer-based text generation
+* Applying Generative AI techniques
+* Working with Hugging Face Transformer models
+* Implementing text evaluation metrics
+* Measuring semantic similarity using sentence embeddings
+
+---
+
 ## 📜 License
 
 This project is licensed under the MIT License.
+
+---
+
+## 👩‍💻 Author
+
+**Jincy Jos**
+
+Generative AI Module End Assignment
