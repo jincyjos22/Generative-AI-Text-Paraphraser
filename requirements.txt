@@ -1,0 +1,8 @@
+transformers
+sentencepiece
+torch
+textblob
+nltk
+rouge-score
+sentence-transformers
+language-tool-python
