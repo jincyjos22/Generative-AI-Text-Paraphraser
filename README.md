@@ -1,131 +1,112 @@
-# Generative AI Text Paraphraser
-
-### Transformer-based NLP system for paraphrasing, grammar correction, and semantic evaluation
-
-A transformer-based NLP tool that rewrites text while preserving meaning, improving clarity, and ensuring originality — built with Hugging Face Transformers, LanguageTool, and Sentence-Transformers.
-
-**Author:** Muhsina Safeeth
-
----
+# Generative-AI-Text-Paraphraser
 
 ## 📌 Overview
 
-This project is a Generative AI module assignment that implements an end-to-end paraphrasing pipeline. It uses the **T5-small** transformer model to generate paraphrases, applies automated grammar and fluency correction, and evaluates output quality using BLEU, ROUGE-L, and semantic similarity metrics.
+The AI-Powered Paraphrasing Tool is a Transformer-based NLP system that rewrites input text while preserving its meaning. It also performs grammar correction and evaluates output quality using standard NLP metrics.
 
----
+Built using T5 Transformer models, this project demonstrates a complete NLP pipeline including generation, correction, and evaluation.
 
 ## ✨ Features
 
-- 🔄 Transformer-based paraphrasing using T5-small
-- ✅ Grammar & spelling correction via LanguageTool
-- 📊 Evaluation using BLEU, ROUGE-L, and semantic similarity
-- ⚡ Lightweight and CPU-friendly (no GPU required)
-- 📓 Clean and well-structured notebook implementation
+- 🔁 AI-based paraphrasing using T5 Transformer  
+- ✍️ Grammar correction using TextBlob  
+- 📊 Evaluation metrics:
+  - BLEU Score  
+  - ROUGE Score  
+  - Semantic Similarity  
+- 🧠 Sentence embedding comparison using SentenceTransformers  
+- ⚡ Lightweight pipeline (no Java required)  
+- 🧪 Supports multiple test cases  
 
----
+## 🛠️ Tech Stack
 
-## 🛠 Tech Stack
+- Python 3  
+- Hugging Face Transformers  
+- PyTorch  
+- NLTK  
+- TextBlob  
+- ROUGE Score  
+- Sentence-Transformers  
 
-| Component | Technology |
-|---|---|
-| Language | Python |
-| Model | T5-small (Hugging Face Transformers) |
-| Grammar Check | LanguageTool |
-| Semantic Evaluation | Sentence-Transformers |
-| Metrics | BLEU, ROUGE-L, Semantic Similarity |
+## 📂 Project Structure
 
----
+AI-Paraphrasing-Tool/
 
-## 🏗 Architecture
+├── paraphrasing_tool.py   # Main pipeline code  
+├── requirements.txt       # Dependencies  
+└── README.md              # Project documentation  
 
-User Input  
-⬇  
-Text Preprocessing  
-⬇  
-T5-small Transformer Model  
-⬇  
-Grammar Correction (LanguageTool)  
-⬇  
-Evaluation Metrics (BLEU | ROUGE-L | Semantic Similarity)  
-⬇  
-Final Output  
+## ⚙️ Installation
 
----
+1. Clone the repository  
+```bash
+git clone https://github.com/your-username/AI-Paraphrasing-Tool.git
+cd AI-Paraphrasing-Tool
+```
 
-## 🚀 How to Run
-
-### 1. Install dependencies
+2. Install dependencies  
 ```bash
 pip install transformers sentencepiece torch
-pip install textblob nltk rouge-score sentence-transformers language-tool-python
+pip install textblob nltk rouge-score sentence-transformers
 ```
 
-### 2. Run the project
-```bash
-python main.py
+3. Download NLTK data  
+```python
+import nltk
+nltk.download('punkt')
 ```
 
-OR
+## 🚀 How It Works
 
-```bash
-jupyter notebook
+- Input text is passed into a T5 Transformer model  
+- Model generates multiple paraphrased versions  
+- Each output is:
+  - Grammatically corrected (TextBlob)  
+  - Evaluated using:
+    - BLEU score  
+    - ROUGE score  
+    - Semantic similarity (Sentence-BERT)  
+- Final results are displayed with metrics  
+
+## ▶️ Usage
+
+```python
+from paraphrasing_tool import run_pipeline
+
+text = "Machine learning enables computers to learn from data."
+run_pipeline(text, n=2)
 ```
 
----
+## 📊 Example Output
 
-## 📊 Evaluation Metrics
+ORIGINAL TEXT:
+Machine learning enables computers to learn from data...
 
-| Metric | Purpose |
-|---|---|
-| BLEU | Word overlap similarity |
-| ROUGE-L | Sequence overlap |
-| Semantic Similarity | Meaning preservation |
+PARAPHRASE:
+Machine learning allows systems to learn from data...
 
-> Semantic similarity is the most important metric as paraphrasing focuses on preserving meaning.
+METRICS:
+BLEU  : 0.42  
+ROUGE : 0.78  
+SIM   : 0.91  
 
----
+## 🧠 Model Used
 
-## 🧪 Example
+- T5 Paraphraser: ramsrigouthamg/t5_paraphraser  
+- Sentence Embedding Model: all-MiniLM-L6-v2  
 
-**Input:**
-Artificial intelligence is transforming many industries by automating tasks, improving decision-making, and enabling new products and services.
+## 📈 Future Improvements
 
-**Output:**
-AI is reshaping industries by automating work, improving decisions, and enabling new services.
+- 🌐 Web UI using Streamlit or Flask  
+- 🔥 Better grammar correction using LanguageTool API  
+- 📊 Advanced evaluation dashboard  
+- 💾 Save paraphrased outputs as dataset  
+- ⚡ Faster inference optimization  
 
----
+## 👨‍💻 Author
 
-## 📈 Project Outcomes
+Jincy Jos  
 
-- Meaning-preserving paraphrasing
-- Grammar correction automation
-- Semantic evaluation pipeline
-- Transformer-based NLP workflow
-- Ready for deployment improvements
-
----
-
-## 🛣 Roadmap
-
-- Multiple paraphrase generation
-- Fine-tuning on custom datasets
-- Plagiarism detection module
-- Web API / Streamlit deployment
-- Multilingual support
-
----
-
-## 📚 References
-
-1. T5: Exploring Transfer Learning (Raffel et al.)
-2. Hugging Face Transformers
-3. LanguageTool
-4. Sentence-Transformers
-5. BLEU Score (Papineni et al.)
-6. ROUGE Metric (Lin)
-
----
-
-## 📄 License
+## 📜 License
 
 This project is licensed under the MIT License.
